@@ -62,6 +62,7 @@ const banana = new Fruit({
     review: "This is a banana"
 })
 
+//#insert Many Elements
 //Fruit.insertMany([kiwi,orange,banana], function(err){
 //    if(err){
 //        console.log(err)
@@ -70,6 +71,30 @@ const banana = new Fruit({
 //    }
 //})
 
+//#update element
+//Fruit.updateOne({_id : "5fad3e5e80736f2b6489334d"}, {name: "Epal"}, function (err){
+//    if (err){
+//        console.log(err);
+//    }else{
+//        console.log("Succesfully update item");
+//    }
+//})
+
+Person.deleteMany({name:"Angela"}, function (err){
+    if(err){
+        console.log(err)
+    }else{
+        console.log("Succesfuly delete the item wich name is 'Angela'");
+    }
+})
+
+Fruit.deleteOne({ name: 'Epal' }, function (err){
+    if(err){
+        console.log(err);
+    }else{
+        console.log("Succesfuly delete the item");
+    }
+});
 
 Fruit.find(function (err, fruits){
     
